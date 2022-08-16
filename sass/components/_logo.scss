@@ -1,0 +1,18 @@
+.logo {
+    text-decoration: none;
+    font-family: $font-logo;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+
+    color: getColor('accent');
+}
+
+.page-header__logo {
+    color: getColor('black');
+}
+
+.page-footer__logo {
+    color: getColor('white');
+}

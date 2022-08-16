@@ -1,0 +1,33 @@
+.clients {
+    @include padding-section ();
+}
+
+.clients__list {
+    @extend %list;
+    display: flex;
+}
+
+.clients__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.clients__link {
+    @extend %link;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border-radius: 4px;
+
+    fill: getColor('clients-logo');
+    border: 1px solid getColor('clients-logo');
+
+    @include transition-base(fill, border);
+
+    &:hover,
+    &:focus {
+        border: 1px solid getColor('accent');
+        fill: getColor('accent');
+    }
+}

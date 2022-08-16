@@ -1,0 +1,78 @@
+.team {
+    @include padding-section ();
+    background-color: getColor('gray-background');
+}
+
+.team__list {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team__item {
+    width: 270px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: getColor('white');
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.employee {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.employee__title {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: getColor('title-text');
+}
+
+.employee__description {
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.employee__socials {
+    @extend %list;
+    display: flex;
+    margin-top: 16px;
+}
+
+.employee__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.employee__link {
+    @extend %link;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    fill: getColor('clients-logo');
+
+    @include transition-base(background-color, fill);
+
+    &:hover,
+    &:focus {
+        background-color: getColor('accent');
+        outline: none;
+        fill: getColor('white');
+    }
+}

@@ -1,0 +1,26 @@
+body {
+    color: getColor('primary-text');
+    background-color: getColor('white');
+    font-family: $font-main;
+    letter-spacing: 0.02em;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.works__title,
+.team__title,
+.clients__title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: getColor('title-text');
+}
