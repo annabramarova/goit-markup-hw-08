@@ -1,15 +1,31 @@
-.menu {
+.portfolio-menu {
     @extend %list;
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+        flex-wrap: nowrap;
+            justify-content: center;
+        }
+    
+        @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+        }
 }
 
-.menu__item:not(:last-child) {
-    margin-right: 8px;
+.portfolio-menu__item {
+
+    @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
+
+        &:not(:last-child) {
+                margin-right: 8px;
+            }
 }
 
-.menu__button {
+.portfolio-menu__button {
     @extend %button;
     display: block;
     padding: 6px 22px;

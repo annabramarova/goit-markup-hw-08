@@ -1,5 +1,9 @@
 .works {
-    @include padding-section (0);
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+
+    @include no-padding();
 }
 
 .works__list {

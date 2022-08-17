@@ -6,8 +6,19 @@
 }
 
 .page-footer__container {
+    text-align: center;
+    
+    @media screen and (min-width: 768px) {
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    }
+
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+        align-items: baseline;
+        }
 }
 
 .page-footer__text {
@@ -23,3 +34,4 @@
         margin-bottom: 20px;
     }
 }
+

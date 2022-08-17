@@ -1,5 +1,5 @@
 .team {
-    @include padding-section ();
+    @include padding-section();
     background-color: getColor('gray-background');
 }
 
