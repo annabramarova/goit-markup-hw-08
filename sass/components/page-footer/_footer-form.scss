@@ -1,6 +1,15 @@
 .page-footer__signup {
+
+    @media screen and (min-width: 768px) {
+    width: 450px;
+    margin-top: 60px;
+    }
+
     @media screen and (min-width: 1200px) {
-        margin-left: auto;}
+        margin-left: auto;
+        width: 570px;
+        margin-top: 0px;
+    }
 }
 
 .page-footer__form {
