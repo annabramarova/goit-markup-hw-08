@@ -15,6 +15,10 @@
 .mobile-menu {
     padding: 0;
     margin: 0;
+
+    @media (min-width: 768px) {
+            display: none;
+        }
 }
 
 .page-header__button {

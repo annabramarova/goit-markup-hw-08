@@ -1765,6 +1765,11 @@ body {
   padding: 0;
   margin: 0;
 }
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
 
 .page-header__button {
   position: absolute;
