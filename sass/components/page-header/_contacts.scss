@@ -12,40 +12,92 @@
         }
 }
 
-.contacts-list__link {
+.contacts-list__phone {
     @extend %link;
-    display: flex;
-    
-    align-items: center;
+    display: inline-block;
+    margin-bottom: 32px;
 
     font-weight: 500;
-    font-size: 12px;
-    line-height: 1.14;
-    
-    color: getColor('primary-text');
-    fill: getColor('primary-text');
+    font-size: 30px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
 
-    @include transition-base(color, fill);
+    color: getColor('accent');
 
-    &:hover,
-    &:focus {
-        color: getColor('accent');
-        fill: getColor('accent');
-        outline: none;
+    @media screen and (min-width: 380px) {
+        font-size: 34px;
+        line-height: 1.17;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.16;
+
+        color: getColor('primary-text');
+        fill: getColor('primary-text');
+        
+        @include transition-base(color, fill);
+        
+            &:hover,
+            &:focus {
+                color: getColor('accent');
+                fill: getColor('accent');
+                outline: none;
+            }
     }
 
     @media screen and (min-width: 1200px) {
         font-size: 14px;
-        }}
+        line-height: 1.14;
+    }
+}
 
-.contacts-list__item {
-    &:not(:last-child) {
-        @media screen and (min-width: 768px) and (max-width: 1200px) {
-            margin-bottom: 10px;
-            }
+.contacts-list__mail {
+    @extend %link;
+    display: inline-block;
+    margin-bottom: 64px;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    
+    color: getColor('primary-text');
+
+    @media screen and (min-width: 768px){
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.16;
+        
+    fill: getColor('primary-text');
+        
+    @include transition-base(color, fill);
+        
+        &:hover,
+        &:focus {
+            color: getColor('accent');
+            fill: getColor('accent');
+            outline: none;
         }
+    }
+        
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.14;
+        margin: 0;
+    }
 }
 
 .contacts-list__icon {
-    margin-right: 10px;
-}
+    display: none;
+
+    @media screen and (min-width: 768px){
+        display: block;
+        margin-right: 10px;
+        }
+    }

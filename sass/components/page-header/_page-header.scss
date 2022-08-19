@@ -6,7 +6,7 @@
     position: relative;
     padding: 10px 15px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width:768px) {
         display: flex;
         flex-grow: 1;
         align-items: center;
@@ -14,8 +14,106 @@
     }
 }
 
-.page-header__nav {
+.menu {
+    @media screen and (max-width: 768px) {
+            display: none;
+        }
+
+    @media screen and (min-width: 768px) {
+            display: flex;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+                margin-left: auto;
+                justify-content: space-around;
+                flex-grow: 1;
+        }
+
+    
+}
+
+
+.page-header__button {
+    @extend %button;
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    min-width: 40px;
+    min-height: 40px;
+
     display: flex;
     align-items: center;
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+}
+
+.page-header__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    background-color: getColor('white');
+    transform: translateY(-100%);
+    @include transition-base(transform);
+
+    &.is-open {
+        transform: translateX(0);
+    }
+}
+
+
+.page-header__socials {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.page-header__link {
+    @extend %link;
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    color: getColor('accent');
+}
+
+.page-header__item {
+
+    &:not(:last-child) {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        padding-right: 10px;
+        margin-right: 10px;
+    }
+    &:nth-child(n + 3) {
+        @media screen and (max-width: 373px){
+            border: none;
+        }
+    }
+}
+
+.mobile-menu {
+
+    padding: 0;
+    margin: 0;
 }
 

@@ -1,12 +1,12 @@
 .site-nav {
     @extend %list;
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width: 768px) {
         display: flex;
         margin-left: 88px;
         }
 
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: 1200px) {
     margin-left: 93px;}
 
 }
@@ -30,7 +30,7 @@
         outline: none;
     }
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width: 768px) {
             padding-top: 32px;
             padding-bottom: 32px;
             font-size: 14px;
@@ -54,12 +54,10 @@
     }
 }
 
-
-
 .site-nav__item{
 
     &:not(:last-child) {
-            @media screen and (min-width:768px) {
+            @media screen and (min-width: 768px) {
                 margin-right: 50px;
             }
         }
