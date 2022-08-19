@@ -67,6 +67,12 @@
     
     color: getColor('primary-text');
 
+    &:hover,
+        &:focus {
+            color: getColor('accent');
+            outline: none;
+        }
+
     @media screen and (min-width: 768px){
     display: flex;
     align-items: center;
@@ -80,9 +86,7 @@
         
         &:hover,
         &:focus {
-            color: getColor('accent');
             fill: getColor('accent');
-            outline: none;
         }
     }
         

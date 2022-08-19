@@ -547,6 +547,9 @@ body {
   color: #2196f3;
   outline: none;
 }
+.site-nav__link--active {
+  color: #2196f3;
+}
 @media screen and (min-width: 768px) {
   .site-nav__link {
     padding-top: 32px;
@@ -571,6 +574,11 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .site-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
 @media screen and (min-width: 768px) {
   .site-nav__item:not(:last-child) {
     margin-right: 50px;
@@ -654,6 +662,10 @@ body {
   letter-spacing: 0.02em;
   color: #757575;
 }
+.contacts-list__mail:hover, .contacts-list__mail:focus {
+  color: #2196f3;
+  outline: none;
+}
 @media screen and (min-width: 768px) {
   .contacts-list__mail {
     display: -webkit-box;
@@ -672,9 +684,7 @@ body {
     transition-property: color, fill;
   }
   .contacts-list__mail:hover, .contacts-list__mail:focus {
-    color: #2196f3;
     fill: #2196f3;
-    outline: none;
   }
 }
 @media screen and (min-width: 1200px) {

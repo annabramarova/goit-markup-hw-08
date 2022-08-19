@@ -30,6 +30,9 @@
         outline: none;
     }
 
+    &--active {
+            color: getColor('accent');}
+
     @media screen and (min-width: 768px) {
             padding-top: 32px;
             padding-bottom: 32px;
@@ -57,8 +60,14 @@
 .site-nav__item{
 
     &:not(:last-child) {
-            @media screen and (min-width: 768px) {
+    @media screen and (max-width: 768px) {
+        margin-bottom: 32px;}
+    }
+
+    &:not(:last-child) {
+        @media screen and (min-width: 768px){
                 margin-right: 50px;
-            }
         }
+    }
 }
+
