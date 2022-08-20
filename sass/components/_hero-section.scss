@@ -64,7 +64,7 @@
     margin-right: auto;
     background-color: getColor('hero-background');
     background-image: getGrad('linear'),
-        url('mob-background.jpg');
+        url("/images/mob-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -73,20 +73,20 @@
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
             .hero--overlay {
-                background-image: getGrad('linear'), url('mob-background@2x.jpg');
+                background-image: getGrad('linear'), url("/images/mob-background@2x.jpg");
         }
     }
 }
 
     @media (min-width: 768px) { 
         .hero--overlay {
-                background-image: getGrad('linear'), url('tablet-background.jpg');
+                background-image: getGrad('linear'), url("/images/tablet-background.jpg");
         
             @media screen and (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
                 .hero--overlay {
-                        background-image: getGrad('linear'), url('tablet-background@2x.jpg');
+                        background-image: getGrad('linear'), url("/images/tablet-background@2x.jpg");
                     }
                 }   
         }
@@ -95,13 +95,13 @@
     @media screen and (min-width: 1200px) {
         .hero--overlay {
                 height: 600px;
-                background-image: getGrad('linear'), url('desk-background.jpg');
+                background-image: getGrad('linear'), url("/images/desk-background.jpg");
 
         @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
                 .hero--overlay {
-                    background-image: getGrad('linear'), url('desk-background@2x.jpg');
+                    background-image: getGrad('linear'), url("/images/desk-background@2x.jpg");
                 }
             }    
         }
