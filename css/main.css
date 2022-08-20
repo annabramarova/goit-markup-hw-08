@@ -844,6 +844,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .hero--overlay {
+    margin-left: auto;
+    margin-right: auto;
     height: 600px;
   }
 }
