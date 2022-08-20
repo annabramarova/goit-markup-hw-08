@@ -63,7 +63,7 @@
     height: 400px;
     background-color: getColor('hero-background');
     background-image: getGrad('linear'),
-        url("mob-background.jpg");
+        url(../images/mob-background.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: 480px 400px;
@@ -73,7 +73,7 @@
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
             .hero--overlay {
-                background-image: getGrad('linear'), url("../images/mob-background@2x.jpg");
+                background-image: getGrad('linear'), url(../images/mob-background@2x.jpg);
         }
     }
 
@@ -81,14 +81,14 @@
         .hero--overlay {
                 max-width: 768px;
                 height: 400px;
-                background-image: getGrad('linear'), url("../images/tablet-background.jpg");
+                background-image: getGrad('linear'), url(../images/tablet-background.jpg);
                 background-size: 768px 400px;
         
             @media screen and (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
                 .hero--overlay {
-                        background-image: getGrad('linear'), url("../images/tablet-background@2x.jpg");
+                        background-image: getGrad('linear'), url(../images/tablet-background@2x.jpg);
                     }
                 }   
         }
@@ -98,14 +98,14 @@
         .hero--overlay {
                 max-width: 1600px;
                 max-height: 600px;
-                background-image: getGrad('linear'), url("../images/desk-background.jpg");
+                background-image: getGrad('linear'), url(../images/desk-background.jpg);
                 background-size: 1600px 600px;
 
         @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
                 .hero--overlay {
-                    background-image: getGrad('linear'), url("../images/desk-background@2x.jpg");
+                    background-image: getGrad('linear'), url(../images/desk-background@2x.jpg);
                 }
             }    
         }

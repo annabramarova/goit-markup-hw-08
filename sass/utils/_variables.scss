@@ -23,9 +23,9 @@ $colors: (
 }
 
 $gradient: (
-    'linear':linear-gradient(to right,
+    'linear': linear-gradient(to right,
         rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4))
+        rgba(47, 48, 58, 0.4)),
 );
 
 @function getGrad($key) {
