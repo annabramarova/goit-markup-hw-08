@@ -1,9 +1,8 @@
 .page-header {
     border-bottom: 1px solid getColor('header-line');
-    }
+}
 
 .page-header__container {
-    position: relative;
     padding: 10px 15px;
 
     @media screen and (min-width:768px) {
@@ -16,21 +15,21 @@
 
 .page-header__menu {
     @media screen and (max-width: 768px) {
-            display: none;
-        }
+        display: none;
+    }
 
     @media screen and (min-width: 768px) {
-            display: flex;
-                align-items: center;
-                padding: 0;
-                margin: 0;
-                margin-left: auto;
-                justify-content: space-around;
-                flex-grow: 1;
-        }
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        margin-left: auto;
+        justify-content: space-around;
+        flex-grow: 1;
+    }
 
-    
 }
+
 
 .page-header__button {
     @extend %button;
@@ -46,13 +45,9 @@
     margin: 0;
     padding: 0;
 
-    border: 0;
+    border: none;
     border-radius: 50%;
     background-color: transparent;
-
-    &:focus {
-            outline: none;
-        }
 
     @media screen and (min-width: 768px) {
         display: none;
@@ -60,29 +55,41 @@
 
 }
 
-.page-header__mobile {
+.page-header__mobil {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 48px 40px;
     background-color: getColor('white');
     transform: translateY(-100%);
-    @include transition-base(transform);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    @include transition-base(transform, opacity, visibility);
 
     &.is-open {
-        transform: translateX(0);
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        overflow-y: scroll;
     }
 }
 
 .mobile-menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
-    padding: 0;
+    padding: 48px 40px;
     margin: 0;
+}
+
+.page-header__nav {
+    @media screen and (max-width: 768px) {
+        margin-bottom: auto;
+        ;
+    }
 }
 
 .mobile-menu__socials {
@@ -93,8 +100,8 @@
     padding: 0;
 
     @media screen and (min-width: 768px) {
-        display: none;
-    }
+            display: none;
+        }
 }
 
 .mobile-menu__link {
@@ -115,28 +122,4 @@
         padding-right: 10px;
         margin-right: 10px;
     }
-    &:nth-child(n + 3) {
-        @media screen and (max-width: 373px){
-            border: none;
-        }
-    }
 }
-
-
-
-.page-header__icon-menu,
-.page-header__icon-close {
-    @media screen and (min-width: 768px) {
-            display: none;
-        }
-
-    color: getColor('black');
-        fill: getColor('black');
-
-    .page-header__button:hover &,
-    .page-header__button:focus & {
-            color: getColor('accent');
-                fill: getColor('accent');
-            }
-        }
-    
