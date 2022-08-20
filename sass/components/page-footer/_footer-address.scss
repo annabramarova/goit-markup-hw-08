@@ -16,26 +16,23 @@
 
 .address__list {
     @extend %list;
-    @media screen and (max-width:1200px) {
-            margin-top: 8px;
-        }
+    margin-top: 8px;
     
-        @media screen and (min-width:1200px) {
-            margin-top: 9px;
+    @media screen and (min-width:1200px) {
+        margin-top: 9px;
         }
 }
 
 .address__item {
 
     &:not(:last-child) {
-    @media screen and (max-width:1200px) {
-        margin-bottom: 8px; }
+        margin-bottom: 8px;}
 
     @media screen and (min-width:1200px) {
         margin-bottom: 9px;
     }    
-    }
 }
+
 
 
 .address__link {

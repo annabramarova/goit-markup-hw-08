@@ -364,6 +364,7 @@ body {
 }
 
 .page-header__container {
+  position: relative;
   padding: 10px 15px;
 }
 @media screen and (min-width: 768px) {
@@ -381,7 +382,7 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.98px) {
   .page-header__menu {
     display: none;
   }
@@ -423,10 +424,23 @@ body {
   border-radius: 50%;
   background-color: transparent;
 }
+.page-header__button:focus {
+  outline: none;
+}
 @media screen and (min-width: 768px) {
   .page-header__button {
     display: none;
   }
+}
+
+.page-header__icon-menu,
+.page-header__icon-close {
+  fill: #000000;
+}
+.page-header__button:hover .page-header__icon-menu, .page-header__button:focus .page-header__icon-menu,
+.page-header__button:hover .page-header__icon-close,
+.page-header__button:focus .page-header__icon-close {
+  fill: #2196f3;
 }
 
 .page-header__mobil {
@@ -470,7 +484,7 @@ body {
   margin: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.98px) {
   .page-header__nav {
     margin-bottom: auto;
   }
@@ -536,6 +550,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     margin-left: 88px;
+    gap: 50px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -573,7 +588,6 @@ body {
   }
   .site-nav__link--active {
     position: relative;
-    color: #2196f3;
   }
   .site-nav__link--active::after {
     position: absolute;
@@ -588,14 +602,9 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .site-nav__item {
     margin-bottom: 32px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .site-nav__item:not(:last-child) {
-    margin-right: 50px;
   }
 }
 
@@ -623,7 +632,6 @@ body {
 
 .contacts-list__phone {
   display: inline-block;
-  margin-bottom: 32px;
   font-weight: 500;
   font-size: 30px;
   line-height: 1.17;
@@ -636,6 +644,11 @@ body {
     line-height: 1.17;
   }
 }
+@media screen and (max-width: 767.98px) {
+  .contacts-list__phone {
+    margin-bottom: 32px;
+  }
+}
 @media screen and (min-width: 768px) {
   .contacts-list__phone {
     display: -webkit-box;
@@ -644,7 +657,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0;
     font-size: 12px;
     line-height: 1.16;
     color: #757575;
@@ -1072,7 +1084,7 @@ body {
   margin: -15px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .clients__item {
     -ms-flex-preferred-size: calc((100% - 60px) / 2);
         flex-basis: calc((100% - 60px) / 2);
@@ -1154,8 +1166,8 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .portfolio-menu__item {
+@media screen and (max-width: 767.98px) {
+  .portfolio-menu__item:nth-child(-n+3) {
     margin-bottom: 15px;
   }
 }
@@ -1351,9 +1363,6 @@ body {
 @media screen and (min-width: 1200px) {
   .page-footer__container {
     text-align: left;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
   }
 }
 
@@ -1385,10 +1394,8 @@ body {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .address__list {
-    margin-top: 8px;
-  }
+.address__list {
+  margin-top: 8px;
 }
 @media screen and (min-width: 1200px) {
   .address__list {
@@ -1396,13 +1403,11 @@ body {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .address__item:not(:last-child) {
-    margin-bottom: 8px;
-  }
+.address__item:not(:last-child) {
+  margin-bottom: 8px;
 }
 @media screen and (min-width: 1200px) {
-  .address__item:not(:last-child) {
+  .address__item {
     margin-bottom: 9px;
   }
 }
@@ -1434,11 +1439,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 60px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767.98px) {
   .page-footer__socials {
-    margin-bottom: 0px;
+    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1529,7 +1533,6 @@ body {
   width: 100%;
   height: 50px;
   padding: 15px 16px;
-  margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -1540,10 +1543,14 @@ body {
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
 }
+@media screen and (max-width: 1199.98px) {
+  .page-footer__input {
+    margin-bottom: 20px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .page-footer__input {
     width: 358px;
-    margin-bottom: 0;
   }
 }
 .page-footer__input::-webkit-input-placeholder {

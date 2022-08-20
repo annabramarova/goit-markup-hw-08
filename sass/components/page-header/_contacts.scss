@@ -15,7 +15,6 @@
 .contacts-list__phone {
     @extend %link;
     display: inline-block;
-    margin-bottom: 32px;
 
     font-weight: 500;
     font-size: 30px;
@@ -29,10 +28,13 @@
         line-height: 1.17;
     }
 
+    @media screen and (max-width: 767.98px) {
+    margin-bottom: 32px;
+    }
+
     @media screen and (min-width: 768px) {
         display: flex;
         align-items: center;
-        margin: 0;
         font-size: 12px;
         line-height: 1.16;
 

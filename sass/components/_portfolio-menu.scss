@@ -15,9 +15,11 @@
 }
 
 .portfolio-menu__item {
-    @media screen and (max-width: 768px) {
+
+    &:nth-child(-n+3){
+    @media screen and (max-width: 767.98px) {
             margin-bottom: 15px;
-        }
+        }}
 
         &:not(:last-child) {
                 margin-right: 8px;
