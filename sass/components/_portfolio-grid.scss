@@ -39,6 +39,7 @@
 }
 
 .projects__item {
+    margin: 0;
 
     @media screen and (min-width: 768px) {
             flex-basis: calc((100% - 2*30px) / 2);
@@ -51,7 +52,7 @@
         }
     
     &:not(:last-child) {
-        @media screen and (max-width:767px) {
+        @media screen and (max-width: 767.98px) {
                 margin-bottom: 30px;
             }
         }

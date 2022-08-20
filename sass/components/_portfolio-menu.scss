@@ -3,27 +3,19 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 40px;
+    column-gap: 8px;
+
+    @media screen and (max-width: 767.98px) {
+            row-gap: 15px;
+        }
 
     @media screen and (min-width: 768px) {
-        flex-wrap: nowrap;
             justify-content: center;
         }
     
         @media screen and (min-width: 1200px) {
         margin-bottom: 50px;
         }
-}
-
-.portfolio-menu__item {
-
-    &:nth-child(-n+3){
-    @media screen and (max-width: 767.98px) {
-            margin-bottom: 15px;
-        }}
-
-        &:not(:last-child) {
-                margin-right: 8px;
-            }
 }
 
 .portfolio-menu__button {
