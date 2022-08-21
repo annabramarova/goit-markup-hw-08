@@ -5,39 +5,47 @@
 
 .team__list {
     @extend %list;
+    row-gap: 30px;
         
     @media screen and (min-width: 768px) {
             display: flex;
             flex-wrap: wrap;
-            margin: -15px;
+            column-gap: 30px;
+
         }
 }
 
 .team__item {
-    width: 270px;
+    display: block;
+    width: 100%;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     background-color: getColor('white');
     border-radius: 0px 0px 4px 4px;
+
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 30px;
+    }
     
     @media screen and (min-width: 768px) {
-            flex-basis: calc((100% - 4*15px) / 2);
-            margin: 15px;
+            width: 354px;
         }
     
         @media screen and (min-width: 1200px) {
-            flex-basis: calc((100% - 8*15px) / 4);
-            margin: 15px;
-            flex-wrap: nowrap;
+            width: 270px;
         }
 }
 
 
 .employee {
     padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 32px;
-    padding-right: 32px;
+        padding-bottom: 24px;
+        padding-left: 32px;
+        padding-right: 32px;
+    
+        @media screen and (min-width: 1200px) {
+                padding-bottom: 30px;
+        }
 }
 
 .employee__title {
@@ -62,6 +70,7 @@
 .employee__socials {
     @extend %list;
     display: flex;
+    justify-content: center;
     margin-top: 16px;
 }
 
