@@ -468,7 +468,7 @@ body {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .mobile-menu {
