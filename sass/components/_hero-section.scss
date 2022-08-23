@@ -75,7 +75,7 @@
             .hero--overlay {
                 background-image: getGrad('linear'), url(../images/mob-background@2x.jpg);
         }
-    }
+}
 
     @media (min-width: 481px) {
         .hero--overlay {
@@ -85,6 +85,7 @@
                 background-size: 768px 400px;
                 background-position: center;
                     background-repeat: no-repeat;
+        }
         
             @media screen and (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
@@ -94,7 +95,7 @@
                     }
                 }   
         }
-    }
+    
     
     @media screen and (min-width: 769px) {
         .hero--overlay {
@@ -104,7 +105,7 @@
                 background-image: getGrad('linear'), url(../images/desk-background.jpg);
                 background-size: 1600px 600px;
                 background-position: center;
-                    background-repeat: no-repeat;
+                    background-repeat: no-repeat;}
 
         @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
@@ -114,7 +115,7 @@
                 }
             }    
         }
-    }
+    
 
         @media screen and (min-width: 1200px) {
             .hero--overlay {
