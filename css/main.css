@@ -1038,12 +1038,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .team__item {
-    width: 354px;
+    max-width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
   .team__item {
-    width: 270px;
+    max-width: 270px;
   }
 }
 
